@@ -1,0 +1,20 @@
+sitegroup: oshpip_wiche_edu
+
+deploy_tasks:
+  development:
+    after_deploy:
+      - drush -y updb --cache-clear=0
+      - drush -y cc all
+  production:
+    after_deploy:
+      - drush -y updb --cache-clear=0
+      - drush -y cc all
+
+shared:
+  production:
+    - src: files
+      dst: sites/default/files
+    - src: root_files
+      dst: files/documents
+    - src: images
+      dst: images
