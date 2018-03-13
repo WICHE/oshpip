@@ -1,4 +1,4 @@
-sitegroup: oshpip_wiche_edu
+sitegroup: oshpip
 
 deploy_tasks:
   development:
@@ -14,7 +14,7 @@ shared:
   production:
     - src: files
       dst: sites/default/files
+      src: uploads
+      dst: sites/default/uploads
     - src: root_files
-      dst: files/documents
-    - src: images
-      dst: images
+      dst: files
