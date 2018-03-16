@@ -14,7 +14,5 @@ shared:
   production:
     - src: files
       dst: sites/default/files
-      src: uploads
+    - src: uploads
       dst: sites/default/uploads
-    - src: root_files
-      dst: files
