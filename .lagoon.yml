@@ -21,7 +21,12 @@ cronjobs:
     service: cli
 
 environments:
-  prod:
+   master:
     routes:
       - varnish:
-        - "oshpip.org" 
+        - "www.oshpip.org":
+            tls-acme: 'false'
+            insecure: Redirect
+        - "oshpip.org":
+            tls-acme: 'false'
+            insecure: Redirect
